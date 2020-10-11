@@ -1,11 +1,13 @@
 package com.sefohui.idktbh.util;
 
+import com.sefohui.idktbh.armor.ModArmorMaterial;
 import com.sefohui.idktbh.blocks.BlockItemBase;
 import com.sefohui.idktbh.blocks.RubyBlock;
 import com.sefohui.idktbh.idktbh;
 import com.sefohui.idktbh.items.ItemBase;
 import com.sefohui.idktbh.tools.ModItemTier;
 import net.minecraft.block.Block;
+import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.RegistryObject;
@@ -15,7 +17,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.rmi.registry.Registry;
 
-public class RegisteryHandler {
+public class RegistryHandler {
 
     public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, idktbh.MOD_ID);
     public static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, idktbh.MOD_ID);
@@ -43,6 +45,19 @@ public class RegisteryHandler {
 
     public static final RegistryObject<HoeItem> RUBY_HOE = ITEMS.register("ruby_hoe", () ->
         new HoeItem(ModItemTier.RUBY, -1.0F, new Item.Properties().group(idktbh.TAB)));
+
+    //Armor
+    public static final RegistryObject<ArmorItem> RUBY_HELMET = ITEMS.register("ruby_helmet", () ->
+        new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.HEAD, new Item.Properties().group(idktbh.TAB)));
+
+    public static final RegistryObject<ArmorItem> RUBY_CHESTPLATE = ITEMS.register("ruby_chestplate", () ->
+        new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.CHEST, new Item.Properties().group(idktbh.TAB)));
+
+    public static final RegistryObject<ArmorItem> RUBY_LEGGINGS = ITEMS.register("ruby_leggings", () ->
+        new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.LEGS, new Item.Properties().group(idktbh.TAB)));
+
+    public static final RegistryObject<ArmorItem> RUBY_BOOTS = ITEMS.register("ruby_boots", () ->
+        new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.FEET, new Item.Properties().group(idktbh.TAB)));
 
     //Blocks
     public static final RegistryObject<Block> RUBY_BLOCK = BLOCKS.register("ruby_block", RubyBlock::new);

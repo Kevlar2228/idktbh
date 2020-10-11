@@ -1,6 +1,6 @@
 package com.sefohui.idktbh;
 
-import com.sefohui.idktbh.util.RegisteryHandler;
+import com.sefohui.idktbh.util.RegistryHandler;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
@@ -21,7 +21,7 @@ public class idktbh {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
-        RegisteryHandler.init();
+        RegistryHandler.init();
 
         MinecraftForge.EVENT_BUS.register(this);
     }
@@ -38,7 +38,7 @@ public class idktbh {
     public static final ItemGroup TAB = new ItemGroup("Idktbhtab") {
         @Override
         public ItemStack createIcon() {
-            return new ItemStack(RegisteryHandler.RUBY.get());
+            return new ItemStack(RegistryHandler.RUBY.get());
         }
     };
 }

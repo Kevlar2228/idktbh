@@ -1,6 +1,6 @@
 package com.sefohui.idktbh.tools;
 
-import com.sefohui.idktbh.util.RegisteryHandler;
+import com.sefohui.idktbh.util.RegistryHandler;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.crafting.Ingredient;
 
@@ -9,7 +9,7 @@ import java.util.function.Supplier;
 public enum ModItemTier implements IItemTier {
 
     RUBY(3, 800, 7.0F, 3.0F, 12, () -> {
-        return Ingredient.fromItems(RegisteryHandler.RUBY_SWORD.get());
+        return Ingredient.fromItems(RegistryHandler.RUBY_SWORD.get());
     });
 
     private final int harvestLevel;
