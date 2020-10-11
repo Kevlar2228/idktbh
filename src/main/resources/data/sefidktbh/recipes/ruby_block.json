@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "xxx",
+        "xxx",
+        "xxx"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "sefidktbh:ruby"
+        }
+    },
+    "result":
+    {
+        "item": "sefidktbh:ruby_block",
+        "count": 1
+    }
+}
